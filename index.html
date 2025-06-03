@@ -34,7 +34,7 @@
     z-index: 10;
     max-width: 960px;
     margin: 0 auto;
-    padding: 5rem 2rem 6rem; /* increased top padding to avoid nav overlap */
+    padding: 5rem 2rem 6rem;
     text-align: center;
   }
 
@@ -95,9 +95,10 @@
   .features {
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5rem;
     justify-content: center;
-    margin-bottom: 4rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    overflow-x: visible;
   }
 
   /* Each feature card */
@@ -107,13 +108,14 @@
     box-shadow: 0 0 20px rgba(255, 79, 110, 0.5);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 79, 110, 0.25);
-    padding: 2.25rem 2.5rem;
-    width: 300px;
+    padding: 1.5rem 1.8rem;
+    width: 280px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
     color: #ff4f6e;
-    text-align: left;
+    text-align: center;
     perspective: 800px;
+    flex-shrink: 0;
   }
   .feature:hover {
     box-shadow: 0 0 40px #ff1a3c, 0 15px 30px rgba(255, 26, 60, 0.6);
@@ -202,9 +204,7 @@
     }
     .feature {
       width: 90%;
-      text-align: center;
-    }
-    .feature p {
+      padding: 1rem 1.2rem;
       text-align: center;
     }
     nav {
@@ -264,9 +264,8 @@
   &copy; 2025 Debasish Mohanty
 </footer>
 
-<!-- You can add your particles.js or any other script here -->
+<!-- Minimal particles effect script -->
 <script>
-  // Minimal particles effect example (optional)
   const canvas = document.getElementById('particles');
   const ctx = canvas.getContext('2d');
   let width, height, particles = [];
